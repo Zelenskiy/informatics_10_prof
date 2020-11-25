@@ -1,8 +1,8 @@
-from math import sqrt
+from math import sqrt, pi
 
 class Kl8_07a:
     def __init__(self,x):
-        self.plcolo = 3.14*x*x
+        self.plcolo = pi*x*x
 
 class Kl8_07b:
     def __init__(self,x):
@@ -32,5 +32,12 @@ ob = Kl8_07(30,20)
 ob.func1(4,6,5)
 ob.func2()
 ob.func3()
+
+
+
+
+
+
+
 
 a = input()
