@@ -20,12 +20,13 @@ class Kl8_07:
         self.k2 = n
 
     def func2(self):
-        self.func2 = self.plzag - self.p1.plcolo * self.k1 - self.p2.plcolo * self.k2 - self.p3.pltrik
-        # return self.plzag - self.p1.plcolo * self.k1 - self.p2.plcolo * self.k2 - self.p3.pltrik
+        # self.func2 = self.plzag - self.p1.plcolo * self.k1 - self.p2.plcolo * self.k2 - self.p3.pltrik
+        return self.plzag - self.p1.plcolo * self.k1 - self.p2.plcolo * self.k2 - self.p3.pltrik
 
     def func3(self):
         print("Загальна площа =", str(self.plzag), "см²")
-        print("Залишок площі =", str(self.func2), "см²")
+        print("Залишок площі =", str(self.func2()), "см²")
+        # print("Залишок площі =", str(self.func2), "см²")
 
 ob = Kl8_07(30,20)
 ob.func1(4,6,5)
