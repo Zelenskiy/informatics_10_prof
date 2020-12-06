@@ -1,22 +1,5 @@
-class Goods:
-    # num, title, price, photo
-    def __init__(self, num="", price=0, title=""):  #
-        self.num = num
-        self.price = price
-        self.title = title
-    photo = []
-    #title = ""
-
-class Table(Goods):
-    height = 0
-    width = 0
-    length = 0
-    def area(self):
-        return self.width * self.length
-
-class DeskTable(Table):
-    numberOfDrawers = 0
-    numberOfPerson = 1
+#from shopclases import DeskTable
+import shopclases
 
 
 list = []
@@ -24,9 +7,12 @@ list = []
 n = int(input("Скільки товарів бажаєте додати? "))
 for t in range(n):
     print("Товар №", t+1, " ", sep="")
-    list.append(DeskTable(num="A321" + str(t), title=input("Назва товару "),
+    try:
+        list.append(shopclases.DeskTable(num="A321" + str(t), title=input("Назва товару "),
                           price=float(input("Вартість в грн "))))   
-    
+    except ValueError:
+        print ("При уведенні вартості уводимо лише число")
+        
 # Вивід даних про товари
 print("Наявні товари")
 for t in list:
