@@ -25,6 +25,7 @@ button1.place(x=150, y=281)
 button2.place(x=300, y=281)
 
 def funcGrnToEuro(x):
+    print(x)
     k = float(entry1.get())
     g = float(entry2.get())
     e = g / k
